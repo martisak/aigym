@@ -151,7 +151,7 @@ def run_episode(env, agent, replay=32, max_timesteps=1000):
         next_observation, reward, done, _ = env.step(action)
         next_observation = agent.prep_input(next_observation, 8)
 
-        reward = -10 if done else reward
+        # reward = -10 if done else reward
 
         agent.remember(
             observation, action, reward, next_observation, done)
